@@ -135,3 +135,23 @@ function PlayerO(playerName, playerColor) {
   this.playerName = playerName;
   this.playerColor = playerColor;
 }
+
+
+// jQuery functions :
+
+$(document).ready(function() {
+
+  $(.player-data).submit(function() {
+    event.preventDefault();
+
+    var playerX = new PlayerX($("input#playerX-name").val(),
+      $("input#playerX-color").val());
+    var playerO = new PlayerO($("input#playerO-name").val(),
+      $("input#playerO-color").val());
+    var board = new Board();
+
+    return playerX;
+    return playerO;
+  });
+
+});
