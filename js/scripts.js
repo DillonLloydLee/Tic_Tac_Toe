@@ -81,6 +81,46 @@ Board.prototype.placeX = function(clickedSquareNumber) {
   }
 }
 
+Board.prototype.placeO = function(clickedSquareNumber) {
+  if (clickedSquareNumber == 1) {
+    if (this.squareOne == " ") {
+      this.squareOne = "O";
+    }
+  } else if (clickedSquareNumber == 2) {
+    if (this.squareTwo == " ") {
+      this.squareTwo = "O";
+    }
+  } else if (clickedSquareNumber == 3) {
+    if (this.squareThree == " ") {
+      this.squareThree = "O";
+    }
+  } else if (clickedSquareNumber == 4) {
+    if (this.squareFour == " ") {
+      this.squareFour = "O";
+    }
+  } else if (clickedSquareNumber == 5) {
+    if (this.squareFive == " ") {
+      this.squareFive = "O";
+    }
+  } else if (clickedSquareNumber == 6) {
+    if (this.squareSix == " ") {
+      this.squareSix = "O";
+    }
+  } else if (clickedSquareNumber == 7) {
+    if (this.squareSeven == " ") {
+      this.squareSeven = "O";
+    }
+  } else if (clickedSquareNumber == 8) {
+    if (this.squareEight == " ") {
+      this.squareEight = "O";
+    }
+  } else if (clickedSquareNumber == 9) {
+    if (this.squareNine == " ") {
+      this.squareNine = "O";
+    }
+  }
+}
+
 // PlayerX prototype :
 
 function PlayerX(playerName, playerColor) {

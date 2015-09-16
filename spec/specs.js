@@ -17,54 +17,62 @@ describe("Board", function() {
     expect(testBoard.squareNine).to.equal(" ");
   });
 
-  it("it finds a simple winner", function() {
+  it("it finds a simple winner.", function() {
     var testBoard = new Board("X", "X", "X",
                               " ", " ", " ",
                               " ", " ", " ");
     expect(testBoard.winner()).to.equal("winner");
   });
 
-  it("it finds a simple loser", function() {
+  it("it finds a simple loser.", function() {
     var testBoard = new Board("X", "O", "X",
                               " ", " ", " ",
                               " ", " ", " ");
     expect(testBoard.winner()).to.equal("no winner");
   });
 
-  it("it finds a diagonal winner with PlayerX", function() {
+  it("it finds a diagonal winner with PlayerX.", function() {
     var testBoard = new Board("X", "O", "X",
                               "O", "X", " ",
                               " ", " ", "X");
     expect(testBoard.winner()).to.equal("winner");
   });
 
-  it("it finds a diagonal winner with PlayerO", function() {
+  it("it finds a diagonal winner with PlayerO.", function() {
     var testBoard = new Board("O", "X", "X",
                               " ", "O", "X",
                               " ", " ", "O");
     expect(testBoard.winner()).to.equal("winner");
   });
 
-  it("it finds some other winner I randomly wrote", function() {
+  it("it finds some other winner I randomly wrote.", function() {
     var testBoard = new Board("O", "O", "X",
                               "O", "X", "X",
                               "O", "X", "O");
     expect(testBoard.winner()).to.equal("winner");
   });
 
-  it("it finds some a cat's game if the the board is full and there is no winner", function() {
+  it("it finds some a cat's game.", function() {
     var testBoard = new Board("X", "O", "X",
                               "O", "X", "X",
                               "O", "X", "O");
     expect(testBoard.winner()).to.equal("cat's game");
   });
 
-  it("it can change when clicked", function() {
+  it("it can place an X in a square.", function() {
     var testBoard = new Board("X", "O", "X",
                               "O", "X", "X",
                               "O", "X", " ");
     testBoard.placeX(9);
     expect(testBoard.squareNine).to.equal("X");
+  });
+
+  it("it can place an O in a square.", function() {
+    var testBoard = new Board("X", "O", "X",
+                              "O", " ", "X",
+                              "O", "X", "O");
+    testBoard.placeO(5);
+    expect(testBoard.squareFive).to.equal("O");
   });
 
 });
