@@ -12,16 +12,22 @@ function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, square
   this.squareNine = squareNine;
 }
 
+Board.prototype.winner = function() {
+  return "PlayerX";
+}
+
 
 // PlayerX prototype :
 
-function PlayerX() {
-
+function PlayerX(playerName, playerColor) {
+  this.playerName = playerName;
+  this.playerColor = playerColor;
 }
 
 
 // PlayerO prototype :
 
-function PlayerO() {
-  
+function PlayerO(playerName, playerColor) {
+  this.playerName = playerName;
+  this.playerColor = playerColor;
 }

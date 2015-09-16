@@ -17,7 +17,7 @@ describe("Board", function() {
 
   it("it finds a simple winner", function() {
     var testBoard = new Board("X", "X", "X", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank");
-    expect(testBoard.winner).to.equal("PlayerX");
+    expect(testBoard.winner()).to.equal("PlayerX");
   });
 
 });
@@ -29,8 +29,8 @@ describe("PlayerX", function() {
 
   it("it creates a Player with certain properties.", function() {
     var testPlayerX = new PlayerX("Jose Torres", "purple");
-    expect(testPlayerX.name).to.equal("Jose Torres");
-    expect(textPlayerX.color).to.equal("purple");
+    expect(testPlayerX.playerName).to.equal("Jose Torres");
+    expect(testPlayerX.playerColor).to.equal("purple");
   });
 
 });
@@ -42,8 +42,8 @@ describe("PlayerO", function() {
 
   it("it creates a Player with certain properties.", function() {
     var testPlayerO = new PlayerO("Jose Torres", "purple");
-    expect(testPlayerO.name).to.equal("Jose Torres");
-    expect(textPlayerO.color).to.equal("purple");
+    expect(testPlayerO.playerName).to.equal("Jose Torres");
+    expect(testPlayerO.playerColor).to.equal("purple");
   });
 
 });
