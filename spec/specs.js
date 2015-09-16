@@ -59,6 +59,14 @@ describe("Board", function() {
     expect(testBoard.winner()).to.equal("cat's game");
   });
 
+  it("it can change when clicked", function() {
+    var testBoard = new Board("X", "O", "X",
+                              "O", "X", "X",
+                              "O", "X", " ");
+    testBoard.placeX();
+    expect(testBoard.squareNine).to.equal("X");
+  });
+
 });
 
 

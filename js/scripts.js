@@ -41,6 +41,12 @@ Board.prototype.winner = function() {
   }
 }
 
+Board.prototype.placeX = function() {
+  if (this.squareNine == " ") {
+    this.squareNine = "X";
+  }
+}
+
 
 // PlayerX prototype :
 
