@@ -13,7 +13,12 @@ function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, square
 }
 
 Board.prototype.winner = function() {
-  return "PlayerX";
+  if ((this.squareOne == this.squareTwo & this.squareTwo == this.squareThree)
+    || (this.squareOne == this.squareFive & this.squareFive == this.squareNine)) {
+    return "winner";
+  } else {
+    return "no winner";
+  }
 }
 
 

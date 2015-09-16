@@ -21,21 +21,28 @@ describe("Board", function() {
     var testBoard = new Board("X", "X", "X",
                               " ", " ", " ",
                               " ", " ", " ");
-    expect(testBoard.winner()).to.equal("PlayerX");
+    expect(testBoard.winner()).to.equal("winner");
+  });
+
+  it("it finds a simple loser", function() {
+    var testBoard = new Board("X", "O", "X",
+                              " ", " ", " ",
+                              " ", " ", " ");
+    expect(testBoard.winner()).to.equal("no winner");
   });
 
   it("it finds a diagonal winner with PlayerX", function() {
     var testBoard = new Board("X", "O", "X",
                               "O", "X", " ",
                               " ", " ", "X");
-    expect(testBoard.winner()).to.equal("PlayerX");
+    expect(testBoard.winner()).to.equal("winner");
   });
 
   it("it finds a diagonal winner with PlayerO", function() {
     var testBoard = new Board("O", "X", "X",
                               " ", "O", "X",
                               " ", " ", "O");
-    expect(testBoard.winner()).to.equal("PlayerO");
+    expect(testBoard.winner()).to.equal("winner");
   });
 
 });
