@@ -9,3 +9,11 @@ h2 {
 .second-page {
   display: none;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: black;
+}

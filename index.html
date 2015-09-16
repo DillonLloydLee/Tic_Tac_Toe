@@ -38,7 +38,7 @@
           <div class=col-md-4>
             <div class="form-group">
               <label for="playerO-name">Enter Player O's Name:</label>
-              <input type="text" name="playerX-name" id="playerX-name" class="form-control" required placeholder="Mister O-mazing">
+              <input type="text" name="playerO-name" id="playerO-name" class="form-control" required placeholder="Mister O-mazing">
             </div>
             <div class="form-group">
               <p><strong>Choose Player O's Color:</strong></p>
@@ -61,18 +61,26 @@
 
       <div class="second-page">
         <h1>Tic Tac Toe!!!</h1>
-        <h2><span="turn">Player X: It Your Turn!</h2>
+        <h2><span class="turn"></span>: It Your Turn!</h2>
         <br>
 
         <div class=col-md-1></div>
         <div class=col-md-2>
-          Player X
+          <span class="playerX-name"></span>
         </div>
-        <div class=col-md-6>
-          Board Here.
-        </div>
+        <div class=col-md-6><center>
+          <span class="square-one clickable">&nbsp&nbsp&nbsp</span>&nbsp&nbsp|&nbsp
+          <span class="square-two clickable">&nbsp&nbsp&nbsp</span>&nbsp&nbsp|&nbsp
+          <span class="square-three clickable">&nbsp&nbsp&nbsp</span></br>----------------</br>
+          <span class="square-four clickable">&nbsp&nbsp&nbsp</span>&nbsp&nbsp|&nbsp
+          <span class="square-five clickable">&nbsp&nbsp&nbsp</span>&nbsp&nbsp|&nbsp
+          <span class="square-six clickable">&nbsp&nbsp&nbsp</span></br>----------------</br>
+          <span class="square-seven clickable">&nbsp&nbsp&nbsp</span>&nbsp&nbsp|&nbsp
+          <span class="square-eight clickable">&nbsp&nbsp&nbsp</span>&nbsp&nbsp|&nbsp
+          <span class="square-nine clickable">&nbsp&nbsp&nbsp</span></br>
+        </center></div>
         <div class=col-md-2>
-          Player O
+          <span class="playerO-name"></span>
         </div>
         <div class=col-md-1></div>
       </div>

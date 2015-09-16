@@ -121,9 +121,6 @@ Board.prototype.placeO = function(clickedSquareNumber) {
   }
 }
 
-var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ");
-var playerX = new PlayerX(" ", " ");
-var playerO = new PlayerO(" ", " ");
 
 // PlayerX prototype :
 
@@ -141,6 +138,13 @@ function PlayerO(playerName, playerColor) {
 }
 
 
+// Initialize variables :
+
+var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ");
+var playerX = new PlayerX(" ", " ");
+var playerO = new PlayerO(" ", " ");
+
+
 // jQuery functions :
 
 $(document).ready(function() {
@@ -155,6 +159,13 @@ $(document).ready(function() {
     playerX.playerColor = $("input#playerX-color").val();
     playerO.playerName = $("input#playerO-name").val();
     playerO.playerColor = $("input#playerO-color").val();
+
+    $(".playerX-name").empty().val();
+    $(".playerX-name").append(playerX.playerName);
+    $(".playerO-name").empty().val();
+    $(".playerO-name").append(playerO.playerName);
+    $(".turn").empty().val();
+    $(".turn").append(playerX.playerName);
 
     $(".first-page").toggle();
     $(".second-page").toggle();
