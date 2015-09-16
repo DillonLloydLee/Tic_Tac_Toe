@@ -13,8 +13,22 @@ function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, square
 }
 
 Board.prototype.winner = function() {
-  if ((this.squareOne == this.squareTwo & this.squareTwo == this.squareThree)
-    || (this.squareOne == this.squareFive & this.squareFive == this.squareNine)) {
+  if ((this.squareOne == this.squareTwo & this.squareTwo == this.squareThree &
+    this.squareOne != " ") ||
+    (this.squareFour == this.squareFive & this.squareFive == this.squareSix &
+      this.squareFour != " ") ||
+    (this.squareSeven == this.squareEight & this.squareEight == this.squareNine &
+      this.squareSeven != " ") ||
+    (this.squareOne == this.squareFour & this.squareFour == this.squareSeven &
+      this.squareOne != " ") ||
+    (this.squareTwo == this.squareFive & this.squareFive == this.squareEight &
+      this.squareTwo != " ") ||
+    (this.squareThree == this.squareSix & this.squareSix == this.squareNine &
+      this.squareThree != " ") ||
+    (this.squareThree == this.squareFive & this.squareFive == this.squareSeven &
+      this.squareThree != " ") ||
+    (this.squareOne == this.squareFive & this.squareFive == this.squareNine &
+      this.squareOne != " ")) {
     return "winner";
   } else {
     return "no winner";

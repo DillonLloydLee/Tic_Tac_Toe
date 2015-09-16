@@ -45,6 +45,13 @@ describe("Board", function() {
     expect(testBoard.winner()).to.equal("winner");
   });
 
+  it("it finds some other winner I randomly wrote", function() {
+    var testBoard = new Board("O", "O", "X",
+                              "O", "X", "X",
+                              "O", "X", "O");
+    expect(testBoard.winner()).to.equal("winner");
+  });
+
 });
 
 
