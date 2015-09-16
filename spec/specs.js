@@ -63,7 +63,7 @@ describe("Board", function() {
     var testBoard = new Board("X", "O", "X",
                               "O", "X", "X",
                               "O", "X", " ");
-    testBoard.placeX();
+    testBoard.placeX(9);
     expect(testBoard.squareNine).to.equal("X");
   });
 

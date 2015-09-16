@@ -41,12 +41,45 @@ Board.prototype.winner = function() {
   }
 }
 
-Board.prototype.placeX = function() {
-  if (this.squareNine == " ") {
-    this.squareNine = "X";
+Board.prototype.placeX = function(clickedSquareNumber) {
+  if (clickedSquareNumber == 1) {
+    if (this.squareOne == " ") {
+      this.squareOne = "X";
+    }
+  } else if (clickedSquareNumber == 2) {
+    if (this.squareTwo == " ") {
+      this.squareTwo = "X";
+    }
+  } else if (clickedSquareNumber == 3) {
+    if (this.squareThree == " ") {
+      this.squareThree = "X";
+    }
+  } else if (clickedSquareNumber == 4) {
+    if (this.squareFour == " ") {
+      this.squareFour = "X";
+    }
+  } else if (clickedSquareNumber == 5) {
+    if (this.squareFive == " ") {
+      this.squareFive = "X";
+    }
+  } else if (clickedSquareNumber == 6) {
+    if (this.squareSix == " ") {
+      this.squareSix = "X";
+    }
+  } else if (clickedSquareNumber == 7) {
+    if (this.squareSeven == " ") {
+      this.squareSeven = "X";
+    }
+  } else if (clickedSquareNumber == 8) {
+    if (this.squareEight == " ") {
+      this.squareEight = "X";
+    }
+  } else if (clickedSquareNumber == 9) {
+    if (this.squareNine == " ") {
+      this.squareNine = "X";
+    }
   }
 }
-
 
 // PlayerX prototype :
 
