@@ -121,6 +121,10 @@ Board.prototype.placeO = function(clickedSquareNumber) {
   }
 }
 
+var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ");
+var playerX = new PlayerX(" ", " ");
+var playerO = new PlayerO(" ", " ");
+
 // PlayerX prototype :
 
 function PlayerX(playerName, playerColor) {
@@ -141,17 +145,18 @@ function PlayerO(playerName, playerColor) {
 
 $(document).ready(function() {
 
-  $(.player-data).submit(function() {
+
+// Start game button:
+
+  $("form#player-data").submit(function() {
     event.preventDefault();
 
-    var playerX = new PlayerX($("input#playerX-name").val(),
-      $("input#playerX-color").val());
-    var playerO = new PlayerO($("input#playerO-name").val(),
-      $("input#playerO-color").val());
-    var board = new Board();
+    playerX.playerName = $("input#playerX-name").val();
+    playerX.playerColor = $("input#playerX-color").val();
+    playerO.playerName = $("input#playerO-name").val();
+    playerO.playerColor = $("input#playerO-color").val();
 
-    return playerX;
-    return playerO;
+    $(".first-page").toggle();
   });
 
 });
