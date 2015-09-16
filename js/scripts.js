@@ -1,6 +1,6 @@
 // Board prototype :
 
-function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, squareSix, squareSeven, squareEight, squareNine) {
+function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, squareSix, squareSeven, squareEight, squareNine, turn) {
   this.squareOne = squareOne;
   this.squareTwo = squareTwo;
   this.squareThree = squareThree;
@@ -10,6 +10,7 @@ function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, square
   this.squareSeven = squareSeven;
   this.squareEight = squareEight;
   this.squareNine = squareNine;
+  this.turn = turn;
 }
 
 Board.prototype.winner = function() {
@@ -140,7 +141,7 @@ function PlayerO(playerName, playerColor) {
 
 // Initialize variables :
 
-var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ");
+var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ", "X");
 var playerX = new PlayerX(" ", " ");
 var playerO = new PlayerO(" ", " ");
 
@@ -169,6 +170,23 @@ $(document).ready(function() {
 
     $(".first-page").toggle();
     $(".second-page").toggle();
+  });
+
+  $(".square-one").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-one").empty().val();
+      $(".square-one").append("X");
+      board.squareOne = "X";
+      $(this).removeClass('clickable');
+      $(this).removeClass('square-one');
+
+    } else {
+      board.turn = "X";
+      $(".square-one").empty().val();
+      $(".square-one").append("&nbspO&nbsp");
+      board.squareOne = "O";
+    }
   });
 
 });
