@@ -178,15 +178,142 @@ $(document).ready(function() {
       $(".square-one").empty().val();
       $(".square-one").append("X");
       board.squareOne = "X";
-      $(this).removeClass('clickable');
-      $(this).removeClass('square-one');
-
     } else {
       board.turn = "X";
       $(".square-one").empty().val();
-      $(".square-one").append("&nbspO&nbsp");
+      $(".square-one").append("O");
       board.squareOne = "O";
     }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-one');
+  });
+
+  $(".square-two").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-two").empty().val();
+      $(".square-two").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-two").empty().val();
+      $(".square-two").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-two');
+  });
+
+  $(".square-three").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-three").empty().val();
+      $(".square-three").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-three").empty().val();
+      $(".square-three").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-three');
+  });
+
+  $(".square-four").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-four").empty().val();
+      $(".square-four").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-four").empty().val();
+      $(".square-four").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-four');
+  });
+
+  $(".square-five").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-five").empty().val();
+      $(".square-five").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-five").empty().val();
+      $(".square-five").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-five');
+  });
+
+  $(".square-six").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-six").empty().val();
+      $(".square-six").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-six").empty().val();
+      $(".square-six").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-six');
+  });
+
+  $(".square-seven").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-seven").empty().val();
+      $(".square-seven").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-seven").empty().val();
+      $(".square-seven").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-seven');
+  });
+
+  $(".square-eight").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-eight").empty().val();
+      $(".square-eight").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-eight").empty().val();
+      $(".square-eight").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-eight');
+  });
+
+  $(".square-nine").click(function() {
+    if (board.turn == "X") {
+      board.turn = "O";
+      $(".square-nine").empty().val();
+      $(".square-nine").append("X");
+      board.squareOne = "X";
+    } else {
+      board.turn = "X";
+      $(".square-nine").empty().val();
+      $(".square-nine").append("O");
+      board.squareOne = "O";
+    }
+    $(this).removeClass('clickable');
+    $(this).removeClass('square-nine');
   });
 
 });
