@@ -52,6 +52,13 @@ describe("Board", function() {
     expect(testBoard.winner()).to.equal("winner");
   });
 
+  it("it finds some a cat's game if the the board is full and there is no winner", function() {
+    var testBoard = new Board("X", "O", "X",
+                              "O", "X", "X",
+                              "O", "X", "O");
+    expect(testBoard.winner()).to.equal("cat's game");
+  });
+
 });
 
 

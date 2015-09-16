@@ -30,6 +30,12 @@ Board.prototype.winner = function() {
     (this.squareOne == this.squareFive & this.squareFive == this.squareNine &
       this.squareOne != " ")) {
     return "winner";
+  } else if (this.squareOne != " " & this.squareTwo != " "
+    & this.squareThree != " " & this.squareFour != " "
+    & this.squareFive != " " & this.squareSix != " "
+    & this.squareSeven != " " & this.squareEight != " "
+    & this.squareNine != " ") {
+    return "cat's game";
   } else {
     return "no winner";
   }
