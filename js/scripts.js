@@ -157,6 +157,7 @@ $(document).ready(function() {
     playerO.playerColor = $("input#playerO-color").val();
 
     $(".first-page").toggle();
+    $(".second-page").toggle();
   });
 
 });
