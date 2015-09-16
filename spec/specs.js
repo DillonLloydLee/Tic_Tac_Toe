@@ -3,21 +3,39 @@
 describe("Board", function() {
 
   it("it creates a Board with specified properties.", function() {
-    var testBoard = new Board("Blank", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank");
-    expect(testBoard.squareOne).to.equal("Blank");
-    expect(testBoard.squareTwo).to.equal("Blank");
-    expect(testBoard.squareThree).to.equal("Blank");
-    expect(testBoard.squareFour).to.equal("Blank");
-    expect(testBoard.squareFive).to.equal("Blank");
-    expect(testBoard.squareSix).to.equal("Blank");
-    expect(testBoard.squareSeven).to.equal("Blank");
-    expect(testBoard.squareEight).to.equal("Blank");
-    expect(testBoard.squareNine).to.equal("Blank");
+    var testBoard = new Board(" ", " ", " ",
+                              " ", " ", " ",
+                              " ", " ", " ");
+    expect(testBoard.squareOne).to.equal(" ");
+    expect(testBoard.squareTwo).to.equal(" ");
+    expect(testBoard.squareThree).to.equal(" ");
+    expect(testBoard.squareFour).to.equal(" ");
+    expect(testBoard.squareFive).to.equal(" ");
+    expect(testBoard.squareSix).to.equal(" ");
+    expect(testBoard.squareSeven).to.equal(" ");
+    expect(testBoard.squareEight).to.equal(" ");
+    expect(testBoard.squareNine).to.equal(" ");
   });
 
   it("it finds a simple winner", function() {
-    var testBoard = new Board("X", "X", "X", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank");
+    var testBoard = new Board("X", "X", "X",
+                              " ", " ", " ",
+                              " ", " ", " ");
     expect(testBoard.winner()).to.equal("PlayerX");
+  });
+
+  it("it finds a diagonal winner with PlayerX", function() {
+    var testBoard = new Board("X", "O", "X",
+                              "O", "X", " ",
+                              " ", " ", "X");
+    expect(testBoard.winner()).to.equal("PlayerX");
+  });
+
+  it("it finds a diagonal winner with PlayerO", function() {
+    var testBoard = new Board("O", "X", "X",
+                              " ", "O", "X",
+                              " ", " ", "O");
+    expect(testBoard.winner()).to.equal("PlayerO");
   });
 
 });
