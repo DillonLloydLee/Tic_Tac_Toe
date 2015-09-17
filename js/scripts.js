@@ -252,6 +252,7 @@ var removePiece = (function() {
 // jQuery functions :
 
 $(document).ready(function() {
+  $(".first-page").addClass('animated bounceInDown');
 
 
 // Start game button :
@@ -277,6 +278,17 @@ $(document).ready(function() {
       $(".second-page").toggle();
     }, 900);
   });
+
+
+// New game button :
+
+$("form#restart").submit(function() {
+  event.preventDefault();
+  $(".second-page").addClass('animated bounceOutDown');
+  setTimeout(function () {
+    location.reload();
+  }, 900);
+});
 
 
 // Clicking on grid functions :
