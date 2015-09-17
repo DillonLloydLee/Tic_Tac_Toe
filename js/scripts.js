@@ -180,17 +180,25 @@ $(function() {
     $("button").addClass('animated pulse');
   }, 4000);
 });
-
 $(function() {
   setTimeout(function () {
     $("button").addClass('animated rubberBand');
   }, 8000);
 });
-
 $(function() {
   setTimeout(function () {
     $("button").addClass('animated swing');
   }, 12000);
+});
+$(function() {
+  setTimeout(function () {
+    $("button").addClass('animated flip');
+  }, 16000);
+});
+$(function() {
+  setTimeout(function () {
+    $("button").addClass('animated wobble');
+  }, 20000);
 });
 
 
@@ -287,6 +295,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -299,11 +309,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-one clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -321,6 +333,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -333,11 +347,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-two clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -355,6 +371,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -367,11 +385,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-three clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -389,6 +409,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -401,11 +423,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-four clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -423,6 +447,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -435,11 +461,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-five clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -457,6 +485,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -469,11 +499,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-six clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -491,6 +523,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -503,11 +537,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-seven clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -525,6 +561,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -537,11 +575,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-eight clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 
@@ -559,6 +599,8 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerX.playerName);
         board.clearAll();
       }
     } else {
@@ -571,11 +613,13 @@ $(document).ready(function() {
       if (board.winner() == "winner") {
         $(".turn-title").toggle();
         $(".winner").toggle();
+        $(".winner").addClass('animated rollIn');
+        $(".winner-here").append(playerO.playerName);
         board.clearAll();
       }
     }
     $(this).off();
-    $(this).removeClass('square-nine clickable');
+    $(this).removeClass('clickable');
     removePiece();
   });
 

@@ -201,3 +201,21 @@ button {
   border: none;
   font-size: 30px;
 }
+
+.gridRow {
+  clear: both;
+}
+
+.square-one, .square-two, .square-three, .square-four, .square-five, .square-six, .square-seven, .square-eight, .square-nine {
+  width: 100px;
+  height: 100px;
+  border:3px solid black;
+  float: left;
+  line-height: 100px;
+  font-size: 50px;
+}
+
+.gameboard {
+  width: 60%;
+
+}
