@@ -3,6 +3,7 @@
   <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/scripts.js"></script>
 
@@ -58,7 +59,8 @@
           </div>
           <div class=col-md-2></div>
           <div class=col-md-12>
-            <center><button type="submit" class="btn">START YOUR GAME</button></center>
+            <br>
+            <center><button type="submit">START YOUR GAME</button></center>
           </div>
         </form>
       </div>
@@ -66,13 +68,16 @@
 <!-- After names have been input : -->
 
       <div class="second-page">
-        <h1>Tic Tac Toe!!!</h1>
-        <span class="turn-title"><h2><span class="turn"></span>'s Turn!</h2></span>
+        <br><br>
+        <h1>TIC TAC TOE</h1>
+        <span class="turn-title"><h2>GO <span class="turn"></span>:</h2></span>
         <br>
 
         <div class=col-md-1></div>
         <div class=col-md-2>
-          <span class="playerX-name"></span>
+          <div class="player-x">
+            <p><span class="playerX-name"></span></p>
+          </div>
         </div>
         <div class=col-md-6><center>
           <span class="square-one clickable">&nbsp&nbsp&nbsp
@@ -95,7 +100,9 @@
           </span></br>
         </center></div>
         <div class=col-md-2>
-          <span class="playerO-name"></span>
+          <div class="player-o">
+            <p><span class="playerO-name"></span></p>
+          </div>
         </div>
         <div class=col-md-1></div>
 
@@ -104,7 +111,7 @@
         <div class="winner">
           <div class="col-md-3"></div>
           <div class="col-md-6"><center>
-          WINNER!
+          <h1>WINNER!</h1>
           </center></div>
           <div class="col-md-3"></div>
         </div>

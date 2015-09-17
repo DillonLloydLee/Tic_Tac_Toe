@@ -172,6 +172,27 @@ var playerX = new PlayerX(" ", " ");
 var playerO = new PlayerO(" ", " ");
 
 
+// Start button animations :
+
+$(function() {
+  setTimeout(function () {
+    $("button").addClass('animated pulse');
+  }, 4000);
+});
+
+$(function() {
+  setTimeout(function () {
+    $("button").addClass('animated rubberBand');
+  }, 8000);
+});
+
+$(function() {
+  setTimeout(function () {
+    $("button").addClass('animated swing');
+  }, 12000);
+});
+
+
 // Sound effect :
 
 var clickSound = new Audio("sounds/beep.mp3");
@@ -180,6 +201,7 @@ var clickSound = new Audio("sounds/beep.mp3");
 // jQuery functions :
 
 $(document).ready(function() {
+  // ("button").addClass('animated pulse');
 
 
 // Start game button :
@@ -199,8 +221,13 @@ $(document).ready(function() {
     $(".turn").empty().val();
     $(".turn").append(playerX.playerName);
 
-    $(".first-page").toggle();
-    $(".second-page").toggle();
+    $(".first-page").addClass('animated bounceOutDown');
+
+    setTimeout(function () {
+      $(".first-page").toggle();
+      $(".second-page").addClass('animated bounceInDown');
+      $(".second-page").toggle();
+    }, 900);
   });
 
 
