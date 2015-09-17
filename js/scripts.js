@@ -260,9 +260,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     playerX.playerName = $("input#playerX-name").val();
-    playerX.playerColor = $("input#playerX-color").val();
     playerO.playerName = $("input#playerO-name").val();
-    playerO.playerColor = $("input#playerO-color").val();
 
     $(".playerX-name").empty().val();
     $(".playerX-name").append(playerX.playerName);
@@ -293,11 +291,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -307,11 +314,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -331,11 +347,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -345,11 +370,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -369,11 +403,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -383,11 +426,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -407,11 +459,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -421,11 +482,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -445,11 +515,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -459,11 +538,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -483,11 +571,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -497,11 +594,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -521,11 +627,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -535,11 +650,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -559,11 +683,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -573,11 +706,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
@@ -597,11 +739,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerX.playerName);
         board.clearAll();
+      }
+      if (playerX.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerX.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerX.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerX.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     } else {
       board.turn = "X";
@@ -611,11 +762,20 @@ $(document).ready(function() {
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
       if (board.winner() == "winner") {
-        $(".turn-title").toggle();
+        $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
         $(".winner-here").append(playerO.playerName);
         board.clearAll();
+      }
+      if (playerO.playerColor == "red") {
+        $(this).css("color", "red");
+      } else if (playerO.playerColor == "blue") {
+        $(this).css("color", "blue");
+      } else if (playerO.playerColor == "green") {
+        $(this).css("color", "green");
+      } else if (playerO.playerColor == "purple") {
+        $(this).css("color", "purple");
       }
     }
     $(this).off();
