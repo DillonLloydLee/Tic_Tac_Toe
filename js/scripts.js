@@ -273,8 +273,8 @@ $(document).ready(function() {
   $("form#player-data").submit(function() {
     event.preventDefault();
 
-    playerX.playerName = $("input#playerX-name").val();
-    playerO.playerName = $("input#playerO-name").val();
+    playerX.playerName = $("input#playerX-name").val().toUpperCase();
+    playerO.playerName = $("input#playerO-name").val().toUpperCase();
 
     $(".playerX-name").empty().val();
     $(".playerX-name").append(playerX.playerName);
@@ -308,10 +308,12 @@ $("form#restart").submit(function() {
 // Square one :
 
   $(".square-one").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-one").empty().val();
-      $(".square-one").append("X");
+      $(".sq-1").empty().val();
+      $(".sq-1").append("X");
+      $(".sq-1").addClass("animated bounceInLeft")
       board.squareOne = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -333,8 +335,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-one").empty().val();
-      $(".square-one").append("O");
+      $(".sq-1").empty().val();
+      $(".sq-1").append("O");
+      $(".sq-1").addClass("animated bounceInRight")
       board.squareOne = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -365,10 +368,12 @@ $("form#restart").submit(function() {
 // Square two :
 
   $(".square-two").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-two").empty().val();
-      $(".square-two").append("X");
+      $(".sq-2").empty().val();
+      $(".sq-2").append("X");
+      $(".sq-2").addClass("animated bounceInLeft")
       board.squareTwo = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -390,8 +395,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-two").empty().val();
-      $(".square-two").append("O");
+      $(".sq-2").empty().val();
+      $(".sq-2").append("O");
+      $(".sq-2").addClass("animated bounceInRight")
       board.squareTwo = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -422,10 +428,12 @@ $("form#restart").submit(function() {
 // Square three :
 
   $(".square-three").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-three").empty().val();
-      $(".square-three").append("X");
+      $(".sq-3").empty().val();
+      $(".sq-3").append("X");
+      $(".sq-3").addClass("animated bounceInLeft")
       board.squareThree = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -447,8 +455,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-three").empty().val();
-      $(".square-three").append("O");
+      $(".sq-3").empty().val();
+      $(".sq-3").append("O");
+      $(".sq-3").addClass("animated bounceInRight")
       board.squareThree = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -479,10 +488,12 @@ $("form#restart").submit(function() {
 // Square four :
 
   $(".square-four").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-four").empty().val();
-      $(".square-four").append("X");
+      $(".sq-4").empty().val();
+      $(".sq-4").append("X");
+      $(".sq-4").addClass("animated bounceInLeft")
       board.squareFour = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -504,8 +515,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-four").empty().val();
-      $(".square-four").append("O");
+      $(".sq-4").empty().val();
+      $(".sq-4").append("O");
+      $(".sq-4").addClass("animated bounceInRight")
       board.squareFour = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -536,10 +548,12 @@ $("form#restart").submit(function() {
 // Square five :
 
   $(".square-five").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-five").empty().val();
-      $(".square-five").append("X");
+      $(".sq-5").empty().val();
+      $(".sq-5").append("X");
+      $(".sq-5").addClass("animated bounceInLeft")
       board.squareFive = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -561,8 +575,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-five").empty().val();
-      $(".square-five").append("O");
+      $(".sq-5").empty().val();
+      $(".sq-5").append("O");
+      $(".sq-5").addClass("animated bounceInRight")
       board.squareFive = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -593,10 +608,12 @@ $("form#restart").submit(function() {
 // Square six :
 
   $(".square-six").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-six").empty().val();
-      $(".square-six").append("X");
+      $(".sq-6").empty().val();
+      $(".sq-6").append("X");
+      $(".sq-6").addClass("animated bounceInLeft")
       board.squareSix = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -618,8 +635,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-six").empty().val();
-      $(".square-six").append("O");
+      $(".sq-6").empty().val();
+      $(".sq-6").append("O");
+      $(".sq-6").addClass("animated bounceInRight")
       board.squareSix = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -650,10 +668,12 @@ $("form#restart").submit(function() {
 // Square seven :
 
   $(".square-seven").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-seven").empty().val();
-      $(".square-seven").append("X");
+      $(".sq-7").empty().val();
+      $(".sq-7").append("X");
+      $(".sq-7").addClass("animated bounceInLeft")
       board.squareSeven = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -675,8 +695,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-seven").empty().val();
-      $(".square-seven").append("O");
+      $(".sq-7").empty().val();
+      $(".sq-7").append("O");
+      $(".sq-7").addClass("animated bounceInRight")
       board.squareSeven = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -707,10 +728,12 @@ $("form#restart").submit(function() {
 // Square eight :
 
   $(".square-eight").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-eight").empty().val();
-      $(".square-eight").append("X");
+      $(".sq-8").empty().val();
+      $(".sq-8").append("X");
+      $(".sq-8").addClass("animated bounceInLeft")
       board.squareEight = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -732,8 +755,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-eight").empty().val();
-      $(".square-eight").append("O");
+      $(".sq-8").empty().val();
+      $(".sq-8").append("O");
+      $(".sq-8").addClass("animated bounceInRight")
       board.squareEight = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
@@ -764,10 +788,12 @@ $("form#restart").submit(function() {
 // Square nine :
 
   $(".square-nine").click(function() {
+    clickSound.play();
     if (board.turn == "X") {
       board.turn = "O";
-      $(".square-nine").empty().val();
-      $(".square-nine").append("X");
+      $(".sq-9").empty().val();
+      $(".sq-9").append("X");
+      $(".sq-9").addClass('animated bounceInLeft')
       board.squareNine = "X";
       $(".turn").empty().val();
       $(".turn").append(playerO.playerName);
@@ -789,8 +815,9 @@ $("form#restart").submit(function() {
       }
     } else {
       board.turn = "X";
-      $(".square-nine").empty().val();
-      $(".square-nine").append("O");
+      $(".sq-9").empty().val();
+      $(".sq-9").append("O");
+      $(".sq-9").addClass('animated bounceInRight')
       board.squareNine = "O";
       $(".turn").empty().val();
       $(".turn").append(playerX.playerName);
