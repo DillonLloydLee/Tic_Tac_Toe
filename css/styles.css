@@ -189,13 +189,13 @@ input:focus {
   vertical-align: middle;
 }
 
-  .red-button:hover {
+.red-button:hover {
   border-top-color: #e6597c;
   background: #e6597c;
   color: #ccc;
 }
 
-  .red-button:active {
+.red-button:active {
   border-top-color: #c7002e;
   background: #c7002e;
 }

@@ -155,6 +155,8 @@ function PlayerX(playerName, playerColor) {
 }
 
 
+
+
 // PlayerO prototype constructor :
 
 function PlayerO(playerName, playerColor) {
@@ -168,6 +170,11 @@ function PlayerO(playerName, playerColor) {
 var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ", "X");
 var playerX = new PlayerX(" ", " ");
 var playerO = new PlayerO(" ", " ");
+
+
+// Sound effect :
+
+var clickSound = new Audio("sounds/beep.mp3");
 
 
 // jQuery functions :
@@ -463,7 +470,7 @@ $(document).ready(function() {
   });
 
 
-// Square nine : 
+// Square nine :
 
   $(".square-nine").click(function() {
     if (board.turn == "X") {
@@ -493,6 +500,57 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-nine clickable');
+  });
+
+
+// Clicking a color choice :
+
+  $(".red-button-x").click(function() {
+    clickSound.play();
+    playerX.playerColor = "red";
+    $(".player-x").css("color", "red");
+  });
+
+  $(".red-button-o").click(function() {
+    clickSound.play();
+    playerO.playerColor = "red";
+    $(".player-o").css("color", "red");
+  });
+
+  $(".blue-button-x").click(function() {
+    clickSound.play();
+    playerX.playerColor = "blue";
+    $(".player-x").css("color", "blue");
+  });
+
+  $(".blue-button-o").click(function() {
+    clickSound.play();
+    playerO.playerColor = "blue";
+    $(".player-o").css("color", "blue");
+  });
+
+  $(".green-button-x").click(function() {
+    clickSound.play();
+    playerX.playerColor = "green";
+    $(".player-x").css("color", "green");
+  });
+
+  $(".green-button-o").click(function() {
+    clickSound.play();
+    playerO.playerColor = "green";
+    $(".player-o").css("color", "green");
+  });
+
+  $(".purple-button-x").click(function() {
+    clickSound.play();
+    playerX.playerColor = "purple";
+    $(".player-x").css("color", "purple");
+  });
+
+  $(".purple-button-o").click(function() {
+    clickSound.play();
+    playerO.playerColor = "purple";
+    $(".player-o").css("color", "purple");
   });
 
 });
