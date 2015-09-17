@@ -9,7 +9,7 @@ began: 09/16/2015
 
 ### Description:
 
-It's a Tic Tac Toe game that practices and demonstrates some coding.
+It's a Tic Tac Toe game that practices and demonstrates some jQuery and HTML coding.  First the players add in their names and choose colors.  Each time a player clicks on one of the Tic Tac Toe grid squares, the HTML is appended so that their X or O marker appears, the turn property of the board prototype is changed, and the "winner" function is run on the board to see if a victory is yet decided.
 
 
 ### Setup:

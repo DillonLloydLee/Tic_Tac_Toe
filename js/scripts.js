@@ -1,4 +1,4 @@
-// Board prototype :
+// Board prototype constructor :
 
 function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, squareSix, squareSeven, squareEight, squareNine, turn) {
   this.squareOne = squareOne;
@@ -12,6 +12,9 @@ function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, square
   this.squareNine = squareNine;
   this.turn = turn;
 }
+
+
+// Function that determines if there's a winner :
 
 Board.prototype.winner = function() {
   if ((this.squareOne == this.squareTwo & this.squareTwo == this.squareThree &
@@ -41,6 +44,9 @@ Board.prototype.winner = function() {
     return "no winner";
   }
 }
+
+
+// Function that places an X on the board :
 
 Board.prototype.placeX = function(clickedSquareNumber) {
   if (clickedSquareNumber == 1) {
@@ -82,6 +88,9 @@ Board.prototype.placeX = function(clickedSquareNumber) {
   }
 }
 
+
+// Function that places an O on the board :
+
 Board.prototype.placeO = function(clickedSquareNumber) {
   if (clickedSquareNumber == 1) {
     if (this.squareOne == " ") {
@@ -122,6 +131,9 @@ Board.prototype.placeO = function(clickedSquareNumber) {
   }
 }
 
+
+// Function that disables clicking of squares :
+
 Board.prototype.clearAll = function() {
   $(".square-one").off();
   $(".square-two").off();
@@ -135,7 +147,7 @@ Board.prototype.clearAll = function() {
 }
 
 
-// PlayerX prototype :
+// PlayerX prototype constructor :
 
 function PlayerX(playerName, playerColor) {
   this.playerName = playerName;
@@ -143,7 +155,7 @@ function PlayerX(playerName, playerColor) {
 }
 
 
-// PlayerO prototype :
+// PlayerO prototype constructor :
 
 function PlayerO(playerName, playerColor) {
   this.playerName = playerName;
@@ -186,7 +198,7 @@ $(document).ready(function() {
 
 
 // Clicking on grid functions :
-// Square One :
+// Square one :
 
   $(".square-one").click(function() {
     if (board.turn == "X") {
@@ -219,7 +231,7 @@ $(document).ready(function() {
   });
 
 
-// Square Two :
+// Square two :
 
   $(".square-two").click(function() {
     if (board.turn == "X") {
@@ -252,6 +264,9 @@ $(document).ready(function() {
 
   });
 
+
+// Square three :
+
   $(".square-three").click(function() {
     if (board.turn == "X") {
       board.turn = "O";
@@ -281,6 +296,9 @@ $(document).ready(function() {
     $(this).off();
     $(this).removeClass('square-three clickable');
   });
+
+
+// Square four :
 
   $(".square-four").click(function() {
     if (board.turn == "X") {
@@ -312,6 +330,9 @@ $(document).ready(function() {
     $(this).removeClass('square-four clickable');
   });
 
+
+// Square five :
+
   $(".square-five").click(function() {
     if (board.turn == "X") {
       board.turn = "O";
@@ -341,6 +362,9 @@ $(document).ready(function() {
     $(this).off();
     $(this).removeClass('square-five clickable');
   });
+
+
+// Square six :
 
   $(".square-six").click(function() {
     if (board.turn == "X") {
@@ -372,6 +396,9 @@ $(document).ready(function() {
     $(this).removeClass('square-six clickable');
   });
 
+
+// Square seven :
+
   $(".square-seven").click(function() {
     if (board.turn == "X") {
       board.turn = "O";
@@ -402,6 +429,9 @@ $(document).ready(function() {
     $(this).removeClass('square-seven clickable');
   });
 
+
+// Square eight :
+
   $(".square-eight").click(function() {
     if (board.turn == "X") {
       board.turn = "O";
@@ -431,6 +461,9 @@ $(document).ready(function() {
     $(this).off();
     $(this).removeClass('square-eight clickable');
   });
+
+
+// Square nine : 
 
   $(".square-nine").click(function() {
     if (board.turn == "X") {
