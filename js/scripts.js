@@ -1,6 +1,6 @@
 // Board prototype constructor :
 
-function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, squareSix, squareSeven, squareEight, squareNine, turn) {
+function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, squareSix, squareSeven, squareEight, squareNine, turn, turnNumber) {
   this.squareOne = squareOne;
   this.squareTwo = squareTwo;
   this.squareThree = squareThree;
@@ -11,6 +11,7 @@ function Board(squareOne, squareTwo, squareThree, squareFour, squareFive, square
   this.squareEight = squareEight;
   this.squareNine = squareNine;
   this.turn = turn;
+  this.turnNumber = turnNumber;
 }
 
 
@@ -167,7 +168,7 @@ function PlayerO(playerName, playerColor) {
 
 // Initialize variables :
 
-var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ", "X");
+var board = new Board(" ", " ", " ", " ", " ", " ", " ", " ", " ", "X", 1);
 var playerX = new PlayerX(" ", " ");
 var playerO = new PlayerO(" ", " ");
 
@@ -198,10 +199,51 @@ $(function() {
 var clickSound = new Audio("sounds/beep.mp3");
 
 
+
+// Piece removing function :
+
+var removePiece = (function() {
+  if (board.turnNumber == 1) {
+    board.turnNumber = 2;
+    $(".exes").empty().val();
+    $(".exes").append("<p>X</p><p>X</p><p>X</p><p>X</p>");
+  } else if (board.turnNumber == 2) {
+    board.turnNumber = 3;
+    $(".ohs").empty().val();
+    $(".ohs").append("<p>O</p><p>O</p><p>O</p>");
+  } else if (board.turnNumber == 3) {
+    board.turnNumber = 4;
+    $(".exes").empty().val();
+    $(".exes").append("<p>X</p><p>X</p><p>X</p>");
+  } else if (board.turnNumber == 4) {
+    board.turnNumber = 5;
+    $(".ohs").empty().val();
+    $(".ohs").append("<p>O</p><p>O</p>");
+  } else if (board.turnNumber == 5) {
+    board.turnNumber = 6;
+    $(".exes").empty().val();
+    $(".exes").append("<p>X</p><p>X</p>");
+  } else if (board.turnNumber == 6) {
+    board.turnNumber = 7;
+    $(".ohs").empty().val();
+    $(".ohs").append("<p>O</p>");
+  } else if (board.turnNumber == 7) {
+    board.turnNumber = 8;
+    $(".exes").empty().val();
+    $(".exes").append("<p>X</p>");
+  } else if (board.turnNumber == 8) {
+    board.turnNumber = 9;
+    $(".ohs").empty().val();
+  } else if (board.turnNumber == 9) {
+    board.turnNumber = 10;
+    $(".exes").empty().val();
+  }
+});
+
+
 // jQuery functions :
 
 $(document).ready(function() {
-  // ("button").addClass('animated pulse');
 
 
 // Start game button :
@@ -262,6 +304,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-one clickable');
+    removePiece();
   });
 
 
@@ -295,7 +338,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-two clickable');
-
+    removePiece();
   });
 
 
@@ -329,6 +372,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-three clickable');
+    removePiece();
   });
 
 
@@ -362,6 +406,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-four clickable');
+    removePiece();
   });
 
 
@@ -395,6 +440,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-five clickable');
+    removePiece();
   });
 
 
@@ -428,6 +474,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-six clickable');
+    removePiece();
   });
 
 
@@ -461,6 +508,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-seven clickable');
+    removePiece();
   });
 
 
@@ -494,6 +542,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-eight clickable');
+    removePiece();
   });
 
 
@@ -527,6 +576,7 @@ $(document).ready(function() {
     }
     $(this).off();
     $(this).removeClass('square-nine clickable');
+    removePiece();
   });
 
 
