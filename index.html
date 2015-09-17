@@ -3,13 +3,16 @@
   <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/scripts.js"></script>
+
     <title>Tic Tac Toe</title>
   </head>
   <body>
+    <img src="paper.jpg" alt="BACKGROUND FAILURE" style="position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:-1">
     <div class="container">
+
+<!-- Player input forms : -->
 
       <div class="first-page">
       <h1>Welcome to Tic Tac Toe!!!</h1>
@@ -59,6 +62,8 @@
         </form>
       </div>
 
+<!-- After names have been input : -->
+
       <div class="second-page">
         <h1>Tic Tac Toe!!!</h1>
         <span class="turn-title"><h2><span class="turn"></span>'s Turn!</h2></span>
@@ -92,6 +97,8 @@
           <span class="playerO-name"></span>
         </div>
         <div class=col-md-1></div>
+
+        <!-- When there is a winner : -->
 
         <div class="winner">
           <div class="col-md-3"></div>
