@@ -249,6 +249,19 @@ var removePiece = (function() {
 });
 
 
+// Check if cat's game function :
+
+var isDraw = (function() {
+  if (board.winner() == "cat's game") {
+    $(".turn-title").fadeToggle();
+    $(".winner").toggle();
+    $(".winner").addClass('animated rollIn');
+    $(".winner-here").append("CAT GAME<br>it is a draw");
+    board.clearAll();
+  }
+});
+
+
 // jQuery functions :
 
 $(document).ready(function() {
@@ -306,7 +319,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -329,7 +342,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -342,6 +355,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -362,7 +376,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -385,7 +399,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -398,6 +412,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -418,7 +433,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -441,7 +456,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -454,6 +469,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -474,7 +490,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -497,7 +513,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -510,6 +526,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -530,7 +547,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -553,7 +570,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -566,6 +583,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -586,7 +604,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -609,7 +627,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -622,6 +640,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -642,7 +661,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -665,7 +684,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -678,6 +697,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -698,7 +718,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -721,7 +741,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -734,6 +754,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
@@ -754,7 +775,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerX.playerName);
+        $(".winner-here").append(playerX.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerX.playerColor == "red") {
@@ -777,7 +798,7 @@ $("form#restart").submit(function() {
         $(".turn-title").fadeToggle();
         $(".winner").toggle();
         $(".winner").addClass('animated rollIn');
-        $(".winner-here").append(playerO.playerName);
+        $(".winner-here").append(playerO.playerName + " IS THE WINNER");
         board.clearAll();
       }
       if (playerO.playerColor == "red") {
@@ -790,6 +811,7 @@ $("form#restart").submit(function() {
         $(this).css("color", "purple");
       }
     }
+    isDraw();
     $(this).off();
     $(this).removeClass('clickable');
     removePiece();
