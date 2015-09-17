@@ -9,10 +9,18 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 75px;
 }
 
 h2 {
   text-align: center;
+  font-size: 30px;
+  padding-top: 30px;
+}
+
+p {
+  text-align: center;
+  font-size: 30px;
 }
 
 .second-page {
